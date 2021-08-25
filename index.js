@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 const userRouter = require("./routes/user");
+const markerRouter = require("./routes/marker");
 
 dotenv.config();
 app.use(express.json());
@@ -22,6 +23,7 @@ db.once("open", () => {
 });
 
 app.use("/api/users", userRouter);
+app.use("/api/markers", markerRouter);
 
 app.listen(port, () => {
   console.log("Server running on port " + port);
