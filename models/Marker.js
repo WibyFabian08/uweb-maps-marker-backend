@@ -7,6 +7,10 @@ const Marker = new Schema(
       type: String,
       required: true,
     },
+    title: {
+      type: String,
+      required: true,
+    },
     long: {
       type: Number,
       required: true,
